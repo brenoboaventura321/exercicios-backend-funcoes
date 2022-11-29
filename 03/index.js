@@ -1,3 +1,16 @@
+function imprimirResumoDoCarrinho(carrinho){
+    let quantidadeTotal= 0;
+    let precoTotal= 0;
+    for (const i of carrinho.produtos){
+        quantidadeTotal += i.qtd;
+        precoTotal += i.precoUnit;
+    };
+
+    console.log(`Cliente: ${nomeDoCliente}
+    Total de Itens: ${carrinho.produtos.length}
+    Total a pagar: R$ ${precoTotal*quantidadeTotal}`)
+};
+
 const carrinho = {
     nomeDoCliente: "Guido Bernal",
     produtos: [
@@ -15,3 +28,5 @@ const carrinho = {
         }
     ]
 }
+
+imprimirResumoDoCarrinho();
